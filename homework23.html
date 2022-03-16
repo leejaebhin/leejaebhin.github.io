@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>웹프로그래밍과 이산수학 강의목차</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#white;">
+    <h2>웹프로그래밍</h2>
+    <p>웹 프로그래밍 및 실습<br>
+        01. 강의 개요 (강의계획서)<br>
+        02. 인터넷 개요 및 기반 기술<br>
+        03. 인터넷 응용 및 서비스 기술 (과제 #1)<br>
+        04. 미래의 인터넷(유비쿼터스)<br>
+        05. HTML 개요 (과제 #2) (과제 #3)<br>
+        06. CGI(Common Gateway Interface) (과제 #4)<br>
+        07. 자바스크립트(JavaScript) (과제 #5)<br>
+        08. PHP 개요 및 설치 [apmsetup download] (과제 #6)<br>
+        09. 기초 프로그래밍 (과제 #7)<br>
+        10. 프로그래밍 본격 시작 (과제 #8)<br>
+      
+  </div>
+  <div class="column" style="background-color:#white;">
+    <h2>이산수학</h2>
+    <p>이산수학 (Discrete Mathematics)<br>
+        00. 개요<br>
+        01. 논리<br>
+        02. 명제의 동치<br>
+        03. 술어와 한정기호<br>
+        04. 중첩된 한정기호<br>
+        05. 증명 방법 (HW#1)<br>
+        06. 집합<br>
+        07. 집합 연산<br>
+        08. 함수 (HW#2)<br>
+        09. 알고리즘<br>
+        10. 함수의 증가<br>
+        11. 알고리즘 복잡도 (HW#3)<br>
+        12. 정수와 나눗셈<br>
+        13. 정수와 알고리즘<br>
+        14. 행렬 (HW#4)<br>
+        15. 증명 전략</p>
+  </div>
+</div>
+<p>Source:moon yang se (cs.kangwon.ac.kr)</p>
+
+</body>
+</html>
