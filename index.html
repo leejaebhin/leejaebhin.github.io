@@ -22,7 +22,8 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">홈</a>
-    <a href="#learn" class="w3-bar-item w3-button w3-padding-large w3-hide-small">강의</a>
+    <a href="#time" class="w3-bar-item w3-button w3-padding-large w3-hide-small">현재 시간</a>
+    <a href="#learn" class="w3-bar-item w3-button w3-padding-large w3-hide-small">과제</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">정보</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
@@ -46,33 +47,54 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./w3images/html.png" style="width:30%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./w3images/php.png" style="width:30%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./w3images/c.png" style="width:30%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        
-    </div>
-  </div>
-
-  <!-- The homework Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="learn">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
     <h3 class="w3-wide">GitHub - Web Programming Homepage (php/html)</h3>
     <h3 class="w3-wide">20191557-이재빈</h3>
+  </div>
+  <!-- Automatic Slideshow Images -->
+  
+  </div>
+  
+  <body onload="startTime()">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="time">
+    <h2>현재 시간은</h2>
+    
+    <div id="txt"></div>
+    
+    <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+    
+    </body>
+</div>
+  <!-- The homework Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="learn">
+    
+    <h3 class="w3-wide">과제</h3>
     
     <p class="w3-opacity">This is homework part. i'll upload webprogramming hw file here.</p>
     <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>케이크+계산기</p>
+        <img src="./w3images/cake.PNG" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <p class="w3-opacity"><a href="cakeform.html">go</a></p>
+        
+</div>
+        
       <div class="w3-third">
         <p>HTML HOMEWORK</p>
         <img src="./w3images/html.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
@@ -145,11 +167,11 @@ body {font-family: "Lato", sans-serif}
     <h2 class="w3-wide w3-center">Information</h2>
     <p class="w3-opacity w3-center"><i>contact</i></p>
     <div class="w3-third">
-        <p>instagram</p>
+        <p>재빈 인스타그램</p>
         <a href="https://www.instagram.com/b.xxnn/"><img src="./w3images/insta.png" class="w3-round" alt="Random Name" style="width:60%">
         </a></div>
     <div class="w3-third">
-        <p>facebook</p>
+        <p>재빈 페이스북</p>
         <a href="https://www.facebook.com/bxxnnn"><img src="./w3images/facebook.png" class="w3-round" alt="Random Name" style="width:60%">
         </a></div>
     </div>
